@@ -91,7 +91,7 @@ namespace Synthesis.FieldTypes.Adapters
 		[SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate", Justification = "Following Sitecore Axes naming")]
 		public IEnumerable<IStandardTemplateItem> GetChildren()
 		{
-			return _item.GetChildren().AsStronglyTypedCollection();
+			return _item.GetChildren().AsStronglyTypedCollection().Where(result => result != null && result.VersionExists);
 		}
 	}
 }

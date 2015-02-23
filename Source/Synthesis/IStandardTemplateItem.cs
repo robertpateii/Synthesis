@@ -174,5 +174,11 @@ namespace Synthesis
 		/// <param name="searchFieldName">The index field name to get the value of.</param>
 		/// <returns>The field name, or null if it did not exist.</returns>
 		string this[string searchFieldName] { get; }
+
+		/// <summary>
+		/// Gets if the language version actually exists.
+		/// </summary>
+		[IndexField("_versionExists")]
+		bool VersionExists { get; }
 	}
 }

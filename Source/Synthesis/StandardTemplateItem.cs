@@ -527,5 +527,14 @@ namespace Synthesis
 
 			return getFromItemAction();
 		}
+
+		/// <summary>
+		/// Gets if the language version actually exists.
+		/// </summary>
+		[IndexField("_versionExists")]
+		public virtual bool VersionExists 
+		{
+			get { return _innerItem.Versions.Count > 0;  }
+		}
 	}
 }
